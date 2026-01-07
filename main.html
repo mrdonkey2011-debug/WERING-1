@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Luxury | Boutique</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SIKHI WEARINGS</div>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Handmade Elegance</h1>
+            <p>From our home to yours. Exquisite tops and jewelry.</p>
+        </div>
+    </header>
+
+    <section class="products">
+        <div class="product-card" data-name="Pearl Necklace" data-price="1200">
+            <div class="img-placeholder">📿</div>
+            <h3>Pearl Necklace</h3>
+            <p>₹1,200</p>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+        <div class="product-card" data-name="Silk Floral Top" data-price="2500">
+            <div class="img-placeholder">👕</div>
+            <h3>Silk Floral Top</h3>
+            <p>₹2,500</p>
+            <button class="add-btn">Add to Cart</button>
+        </div>
+    </section>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h2>Your Order</h2>
+            <div id="cart-items"></div>
+            <hr>
+            <form id="checkout-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="text" id="address" placeholder="Shipping Address" required>
+                <input type="tel" id="phone" placeholder="WhatsApp Number (with Country Code)" required>
+                <div class="total-price">Total: ₹<span id="final-price">0</span></div>
+                <button type="submit" class="order-btn">Confirm & Send to WhatsApp</button>
+                <button type="button" onclick="toggleCart()" class="close-btn">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
